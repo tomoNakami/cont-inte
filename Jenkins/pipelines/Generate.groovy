@@ -7,7 +7,7 @@ import org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition
 
 properties([
     parameters([
-        string(defaultValue: 'https://github.com/naturalett/continuous-integration.git', description: 'Configure your repository pipelines', name: 'repository')
+        string(defaultValue: 'https://github.com/tomoNakami/continuous-integration.git', description: 'Configure your repository pipelines', name: 'repository')
     ])
 ])
 

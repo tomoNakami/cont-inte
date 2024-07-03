@@ -9,7 +9,7 @@
         <hudson.model.StringParameterDefinition>
           <name>repository</name>
           <description>Configure your repository pipelines</description>
-          <defaultValue>https://github.com/naturalett/continuous-integration.git</defaultValue>
+          <defaultValue>https://github.com/tomoNakami/continuous-integration.git</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
       </parameterDefinitions>
@@ -25,12 +25,12 @@ import org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition
 
 properties([
     parameters([
-        string(defaultValue: &apos;https://github.com/naturalett/continuous-integration.git&apos;, description: &apos;Configure your repository pipelines&apos;, name: &apos;repository&apos;)
+        string(defaultValue: &apos;https://github.com/tomoNakami/continuous-integration.git&apos;, description: &apos;Configure your repository pipelines&apos;, name: &apos;repository&apos;)
     ])
 ])
 
 parent = Jenkins.instance
-// def sharedLibrariesUrl = &quot;https://github.com/naturalett/continuous-integration.git&quot;
+// def sharedLibrariesUrl = &quot;https://github.com/tomoNakami/continuous-integration.git&quot;
 
 scm = new GitSCM(params.repository)
 scm.userRemoteConfigs = scm.createRepoList(params.repository, null)

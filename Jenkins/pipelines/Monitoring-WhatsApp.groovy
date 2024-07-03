@@ -15,7 +15,7 @@ pipeline {
         stage('Do job stage') {
             steps {
                 load "/var/workshop-creds/env-file.groovy"
-                git branch: 'main', url: 'https://github.com/naturalett/continuous-integration.git'
+                git branch: 'main', url: 'https://github.com/tomoNakami/continuous-integration.git'
             }
         }
     }

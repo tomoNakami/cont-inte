@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                git branch: 'main', url: 'https://github.com/naturalett/continuous-integration.git'
+                git branch: 'main', url: 'https://github.com/tomoNakami/continuous-integration.git'
             }
         }
         stage('Initialization') {
@@ -25,7 +25,7 @@ pipeline {
             steps {
                 script {
                     dir(applicationDir) {
-                        // https://github.com/naturalett/continuous-integration/tree/main/Application
+                        // https://github.com/tomoNakami/continuous-integration/tree/main/Application
                         customImage = docker.build("${env.dockerHubOwner}/hello-world:${env.BUILD_ID}")
                     }
                 }

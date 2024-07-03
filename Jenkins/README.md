@@ -1,6 +1,6 @@
 ### Create a Jenkins image for efficient deployment and automation of software builds
 ```bash
-docker build -t naturalett/jenkins:2.387-jdk11 .
+docker build -t tomoNakami/jenkins:2.387-jdk11 .
 ```
 
 ### Configure and mount environment variables in the Jenkins container running on Docker for efficient and secure execution of builds
@@ -45,7 +45,7 @@ docker run -d \
         --name jenkins -p 8080:8080 -u root -p 50000:50000 \
         -v ~/workshop-creds:/var/workshop-creds \
         -v /var/run/docker.sock:/var/run/docker.sock \
-        naturalett/jenkins:2.387-jdk11
+        tomoNakami/jenkins:2.387-jdk11
 ```
 
 ### Retrieve the initial administrator password for Jenkins to gain access and start configuring the automation server

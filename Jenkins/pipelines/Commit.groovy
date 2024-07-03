@@ -14,7 +14,7 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                git branch: params.branch, url: 'https://github.com/naturalett/continuous-integration.git'
+                git branch: params.branch, url: 'https://github.com/tomoNakami/continuous-integration.git'
             }
         }
         stage('Initialization') {
